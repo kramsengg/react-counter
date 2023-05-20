@@ -9,5 +9,5 @@ phases:
       - npm run build
   post_build:
     commands: 
-      - aws s3 cp --recursive ./buil s3://rams-awspipelinedemo/
+      - aws s3 cp --recursive ./build s3://rams-awspipelinedemo/
       - aws cloudfront create-invalidation --distribution-id E19A9EEODLS8XH --path /\*
